@@ -1,4 +1,11 @@
 #!/usr/bin/bash
+:<<QWQ
+needs ffmpeg rename and libraries.
+工作目录： 目录下有多个文件夹，其中皆为本子。没有*txt之类的东西
+Thumb.db会自动删除。
+适合本子压制组使用
+POWERED BY PE
+QWQ
 find -name *db -delete
 
 while	ls *\ * &> /dev/null
