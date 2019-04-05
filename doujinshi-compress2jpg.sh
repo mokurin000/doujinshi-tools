@@ -1,12 +1,6 @@
 #!/bin/bash
 
-perl-rename 's\ \空__格\g' *
-
-for N in	`find -type d|grep /`
-do	cd ${N}
-	perl-rename 's\ \空__格\g' *
-	cd ../
-done
+IFS=$'\n'
 
 for a in	`find -type f`
 do	ffmpeg -v 0 -i ${a} ${a}.jpg
@@ -28,8 +22,5 @@ do	cd ${N}
 	
 	cd ../
 done
-
-N=;a=;b=
-perl-rename 's\空__格\ \g' *
 
 echo Done!
