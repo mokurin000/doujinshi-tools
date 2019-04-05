@@ -14,16 +14,16 @@ echo -e -n '<!doctype html><html>\n<head>\n<meta charset="utf-8">\n</head>'"<bod
 
 for var in `find . -name "*[Gg]"` `find . -name "*[Pp]"`
 do	case $var in
-	*[Pp][Nn][Gg])
+	*.[Pp][Nn][Gg])
 			Format="png"
   		;;
-	*[Jj][Pp]*[Gg])
+	*.[Jj][Pp]*[Gg])
   			Format="jpeg"
   		;;
-	*[Ww][Ee][Bb][Pp])
+	*.[Ww][Ee][Bb][Pp])
 			Format="webp"
 		;;
-	*[Bb][Mm][Pp])
+	*.[Bb][Mm][Pp])
 			Format="bmp"
 		;;
 	esac
