@@ -1,4 +1,5 @@
 # doujinshi-tools
+doujinshi tools (scripts)
 
 `doujinshi-compress2jpg.sh` 需要`perl-rename`和`ffmpeg`
 
