@@ -1,7 +1,7 @@
 #!/usr/bin/bash
 if [ "$1"x != convertx ]
-then	echo 用法: $0 convert [输出文件名]
-	echo 工作目录：目录下为同人志图片文件
+then	echo Usage: $0 convert [filename.html]
+	echo works in：a directory with some images
 	exit 0
 fi
 
