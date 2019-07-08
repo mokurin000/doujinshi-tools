@@ -5,10 +5,10 @@ if [ "$1"x != convertx ]
 		exit 0
 fi
 if [ "$2"x != x ]
-	then	OPFILE=$2
-	else	OPFILE=output.html
+	then	exec 3> $2
+	else	exec 3> output.html
 fi
-echo -e -n '<!doctype html><html>\n<head>\n<meta charset="utf-8">\n</head>'"<body>" > $OPFILE
+echo -e -n '<!doctype html><html>\n<head>\n<meta charset="utf-8">\n</head>'"<body>" >&3
 for var in `find . -name "*[Gg]"` `find . -name "*[Pp]"`
 do	case $var in
 	*.[Pp][Nn][Gg])
@@ -24,8 +24,9 @@ do	case $var in
 			Format="bmp"
 		;;
 	esac
-	echo '<img src="data:image/'$Format\;base64, >> $OPFILE
+	echo '<img src="data:image/'$Format\;base64, >&3
 	base64 $var >> $OPFILE
-	echo -e '">\n</img>' >> $OPFILE
+	echo -e '">\n</img>' >&3
 done
-echo -n '</body></html>' >> $OPFILE
+echo -n '</body></html>' >&3
+echo Done!
