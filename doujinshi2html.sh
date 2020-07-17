@@ -25,7 +25,7 @@ do	case $var in
 		;;
 	esac
 	echo '<img src="data:image/'$Format\;base64, >&3
-	base64 $var >> $OPFILE
+	base64 $var >&3
 	echo -e '">\n</img>' >&3
 done
 echo -n '</body></html>' >&3
